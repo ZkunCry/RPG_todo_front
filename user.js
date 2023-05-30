@@ -26,13 +26,12 @@ export default class User{
     const data = await Register(url,this)
     this.Id  = data['id']
     this.Token = data['access_token']
-    return data
+  
   }
   async LoginUser(){
     const data = await Login(url, this).then(value=>value)
     this.Id  = data['id']
     this.Token = data['access_token']
-    return data
   }
   async ChangeName(){
 
